@@ -1,10 +1,10 @@
 <h1><%=@user.full_name%></h1>
 <hr/>
-<h2>Courses</h2>
+<h2>Doctors</h2>
 <ul>
-  <% @user.courses.each do |course|%>
+  <% @user.doctors.each do |doctor|%>
     <li>
-      <%= link_to course.name, course_path(course)%>
+      <%= link_to doctor.name, doctor_path(doctor)%>
     </li>
   <% end %>
 </ul>
