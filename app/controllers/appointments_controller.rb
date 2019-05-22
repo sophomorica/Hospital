@@ -1,9 +1,9 @@
-class AppoinmentsController < ApplicationController
+class AppointmentsController < ApplicationController
   before_action :set_doctor
   
   def index
 
-    @appointments = @doctor.appointments.all
+    @appointments = @doctor.appointments
   end
 
   def new

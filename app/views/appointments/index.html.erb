@@ -4,11 +4,11 @@
 
 <h2>Doctor</h2>
 <ul>
-<% @appointments.each do |a|%>
+<%@appointments.each do |a|%>
   <li>
     <%= a.user.full_name%>
     <br />
-    <%= link_to "Remove", course_enrollment_path(@doctor, a), method: :delete%>
+    <%= link_to "Remove", doctor_appointment_path(@doctor, a), method: :delete%>
   </li>
   
   <%end%>

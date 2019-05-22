@@ -15,5 +15,5 @@ master of <%=@doctor.specialty%>
   </li>
 </ul>
 <%end%>
-<%#= link_to "Appoinments", doctor_appointments_path(@doctor), class: "ui primary button inverted"%>
+<%= link_to "Appoinments", doctor_appointments_path(@doctor), class: "ui primary button inverted"%>
 <%= link_to "Delete Doctor", doctor_path(@doctor), method: :delete, class: "ui red button inverted"%>
