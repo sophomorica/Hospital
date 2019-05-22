@@ -1,5 +1,16 @@
 <h1 style= "color:blue; text-shadow: 2px 2px 2px black;letter-spacing: 5px;"><%=@doctor.full_name%></h1>
 <br />
 <br />
-<%= link_to "Appoinments", doctor_appointments_path(@doctor), class: "ui primary button inverted"%>
+<h2>Has Appointments With</h2>
+<br />
+<% @doctor.appointments.each do |a|%>
+<ul>
+  <li>
+  <%=a.user.full_name%> at: <strong><%=a.date%></strong>
+  <br />
+   <%= link_to "Remove", doctor_appointment_path(a), method: :delete, class: "ui primary button inverted"%>
+  </li>
+</ul>
+<%end%>
+<%#= link_to "Appoinments", doctor_appointments_path(@doctor), class: "ui primary button inverted"%>
 <%= link_to "Delete Doctor", doctor_path(@doctor), method: :delete, class: "ui red button inverted"%>

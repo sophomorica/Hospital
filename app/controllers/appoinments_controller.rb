@@ -2,6 +2,7 @@ class AppoinmentsController < ApplicationController
   before_action :set_doctor
   
   def index
+
     @appointments = @doctor.appointments.all
   end
 
