@@ -7,7 +7,7 @@ class AppointmentsController < ApplicationController
   end
 
   def new
-    @user = User.all - @doctor.users
+    @users = User.all - @doctor.users
     @appointment = @doctor.appointments.new
   end
 
