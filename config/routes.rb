@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root "doctors#index"
+  root "static_pages#home"
 
   resources :users
   resources :doctors do 
