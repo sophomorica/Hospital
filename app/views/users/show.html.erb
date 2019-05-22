@@ -17,9 +17,10 @@
 <%@user.appointments.each do |a|%>
 <ul>
 <li>
-    <h3>Has Appointment at: </h3> <%=a.date%>
+    <h3>Has Appointment at: <%=a.date%></h3> 
 </li>
 
 <%end%>
 </ul>
 <%= link_to "Delete User", user_path(@user), method: :delete, class: "ui red button inverted"%>
+<%#= link_to "Add Appointment", new_doctor_appointment_path(@user)%>
